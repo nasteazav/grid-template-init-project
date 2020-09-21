@@ -87,13 +87,18 @@ h2 {
 
 
 
-  &__image img {
+  &__image {
     display: grid;
-    align-content: center;
-
-    max-width: 100% ;
-    max-height: 480px  ;
-
     justify-items: center;
+
+    img {
+      
+      align-content: center;
+
+      max-width: 100% ;
+      max-height: 480px  ;
+  
+      
+    }
   }
 }
