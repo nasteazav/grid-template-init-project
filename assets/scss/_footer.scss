@@ -1,0 +1,91 @@
+.footer {
+  padding: 50px 20px 70px;
+
+  text-align: center;
+
+  background-color: $color-primary;
+  &__container {
+    @extend %container;
+  }
+  &__social {
+    position: relative;
+
+    display: grid;
+    justify-content: center;
+
+    margin-bottom: 40px;
+
+    grid-template-columns: repeat(auto-fit, minmax(50px, max-content));
+    &::after {
+      position: absolute;
+      bottom: -20px;
+      left: calc(50% - 75px / 2);
+
+      width: 75px;
+      height: 2px;
+
+      content: "";
+
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    a {
+      display: block;
+
+      padding: 10px;
+
+      transition: color 0.5s;
+      &:hover,
+      &:focus {
+        color: $color-accent;
+      }
+    }
+    .fab {
+      font-size: 36px;
+    }
+  }
+
+  &__copy {
+    &-span {
+      margin-right: -0.5em;
+
+      text-align: center;
+      letter-spacing: 0.33em;
+
+      font-weight: 100;
+    }
+
+    &-span-bold {
+      margin: 0 0 0 -15px;
+
+      text-align: center;
+      letter-spacing: 0.05em;
+
+      color: $color-gray-light;
+
+      font-weight: 700;
+    }
+  }
+}
+
+
+.fab {
+  font-family: "Font Awesome 5 Brands";
+}
+.fab,
+.far {
+  font-weight: 400;
+}
+.fa,
+.fab,
+.fad,
+.fal,
+.far,
+.fas {
+  display: inline-block;
+
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+
+  text-rendering: auto;
+}

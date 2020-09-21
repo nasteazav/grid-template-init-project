@@ -1,0 +1,14 @@
+.skills {
+  padding: 10px;
+  margin-bottom: 30px;
+}
+.skills__container {
+  margin-bottom: 20px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+}
+.skills__button {
+  display: flex;
+  justify-content: center;
+}
