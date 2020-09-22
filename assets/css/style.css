@@ -489,7 +489,6 @@ h1 {
 }
 
 h2 {
-  margin-top: 0;
   letter-spacing: 0.1em;
   color: #2d3651;
   font-family: "Roboto Slab", serif;
@@ -1052,6 +1051,10 @@ input:hover, input:focus {
           justify-content: center;
 }
 
+.posts h2 {
+  margin-top: 0;
+}
+
 .post-item {
   -webkit-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
@@ -1250,12 +1253,6 @@ input:hover, input:focus {
   }
 }
 
-@media (min-height: 691px) {
-  .skill-item {
-    min-height: calc(33.33vh - 20px * 0.66);
-  }
-}
-
 @media (min-width: 768px) {
   .header-navbar__btn {
     display: none;
@@ -1280,6 +1277,10 @@ input:hover, input:focus {
   h1 {
     font-size: 3.75rem;
   }
+  h2 {
+    margin-bottom: 56px;
+    font-size: 2.5rem;
+  }
   .btn {
     min-width: 250px;
     height: 60px;
@@ -1297,10 +1298,6 @@ input:hover, input:focus {
   .about {
     padding-top: 100px;
     padding-bottom: 100px;
-  }
-  .about h2 {
-    margin-bottom: 56px;
-    font-size: 2.5rem;
   }
   .about__container {
     grid-gap: 100px;
@@ -1323,6 +1320,10 @@ input:hover, input:focus {
   h1 {
     font-size: 2.5rem;
   }
+  h2 {
+    margin-bottom: 42px;
+    font-size: 2rem;
+  }
   .btn {
     min-width: 200px;
     height: 50px;
@@ -1341,10 +1342,6 @@ input:hover, input:focus {
   .about {
     padding-top: 80px;
     padding-bottom: 80px;
-  }
-  .about h2 {
-    margin-bottom: 42px;
-    font-size: 2rem;
   }
   .about__container {
     grid-gap: 40px;
@@ -1402,14 +1399,14 @@ input:hover, input:focus {
 }
 
 @media (max-width: 767px) and (min-width: 576px) {
+  h2 {
+    margin-bottom: 36px;
+    font-size: 1.5rem;
+  }
   .skills__container {
     grid-gap: 10px;
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6 " "a5 a7" "a8 a9";
     grid-template-columns: 1fr 1fr;
-  }
-  .about h2 {
-    margin-bottom: 36px;
-    font-size: 1.5rem;
   }
   .about__container {
     grid-gap: 20px;
@@ -1426,13 +1423,13 @@ input:hover, input:focus {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media (max-height: 690px) {
-  .skill-item {
-    min-height: calc(230px - 20px * 0.66);
-  }
-}
 
 @media (max-width: 575px) {
+  h2 {
+    margin-bottom: 36px;
+    text-align: center;
+    font-size: 1.5rem;
+  }
   .btn-accent {
     width: 100%;
   }
@@ -1455,11 +1452,6 @@ input:hover, input:focus {
     grid-gap: 20px;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
     grid-template-columns: 1fr;
-  }
-  .about h2 {
-    margin-bottom: 36px;
-    text-align: center;
-    font-size: 1.5rem;
   }
   .about__container {
     grid-gap: 20px;

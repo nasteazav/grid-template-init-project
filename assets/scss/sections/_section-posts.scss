@@ -1,4 +1,5 @@
 .posts {
+ 
   @include lg-min {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -17,6 +18,7 @@
 
     @extend %container;
   }
+  
 
   &__grid {
     display: grid;
@@ -54,6 +56,9 @@
   &__button {
     display: flex;
     justify-content: center;
+  }
+  h2 {
+    margin-top: 0;
   }
 }
 
