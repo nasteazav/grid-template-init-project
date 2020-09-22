@@ -1,10 +1,10 @@
 .skill-item {
-  @include xx-min {
+/*   @include xx-min {
     min-height: 200px;
   }
   @include xx {
     min-height: 200px;
-  }
+  } */
 
   &:nth-of-type(1) {
     min-height: 200px;
