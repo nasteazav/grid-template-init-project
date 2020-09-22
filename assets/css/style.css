@@ -981,15 +981,6 @@ input:hover, input:focus {
   margin-top: -5px;
 }
 
-.about__container::after {
-  position: absolute;
-  top: 0;
-  width: 2px;
-  height: 200px;
-  content: "";
-  background-color: rgba(99, 117, 136, 0.1);
-}
-
 .about__image {
   display: grid;
   justify-items: center;

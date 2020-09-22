@@ -72,17 +72,7 @@ h2 {
         font-size: 1.125rem;
       }
     }
-    &::after {
-      position: absolute;
-      top: 0;
-
-      width: 2px;
-      height: 200px;
-
-      content: "";
-
-      background-color: rgba(99, 117, 136, 0.1);
-    }
+ 
   }
 
 
