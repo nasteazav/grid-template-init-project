@@ -62,8 +62,9 @@ h2 {
       grid-template-columns: 1fr ;
     }
 
-
-    &__content  p:first-of-type {
+/* 
+    &__content 
+     p:first-of-type {
       position: relative;
 
       margin-top: -5px;
@@ -71,11 +72,29 @@ h2 {
       @include lg-min {
         font-size: 1.125rem;
       }
-    }
+    } */
  
   }
 
+ &__content{
+  p {
+    &:first-of-type::after {
+      position: absolute;
+      top: 0;
+    
+      width: 2px;
+      height: 200px;
+    
+      content: "";
+    
+      background-color: rgba(99, 117, 136, 0.1);
+    }
+   &:last-of-type {
+      margin: 0;
+    }
+  }
 
+ } 
 
   &__image {
     display: grid;

@@ -819,6 +819,11 @@ input:hover, input:focus {
           justify-content: center;
 }
 
+.skills__container {
+  display: grid;
+  padding-bottom: 20px;
+}
+
 .skills__button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -826,11 +831,6 @@ input:hover, input:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.skills__container {
-  display: grid;
-  margin-bottom: 20px;
 }
 
 .skill-item {
@@ -910,56 +910,49 @@ input:hover, input:focus {
 }
 
 .skill-item {
-  /*   @include xx-min {
-    min-height: 200px;
-  }
-  @include xx {
-    min-height: 200px;
-  } */
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  justify-items: center;
 }
 
 .skill-item:nth-of-type(1) {
-  min-height: 200px;
   grid-area: a1;
 }
 
 .skill-item:nth-of-type(2) {
-  min-height: 200px;
   grid-area: a2;
 }
 
 .skill-item:nth-of-type(3) {
-  min-height: 200px;
   grid-area: a3;
 }
 
 .skill-item:nth-of-type(4) {
-  min-height: 200px;
   grid-area: a4;
 }
 
 .skill-item:nth-of-type(5) {
-  min-height: 200px;
   grid-area: a5;
 }
 
 .skill-item:nth-of-type(6) {
-  min-height: 200px;
   grid-area: a6;
 }
 
 .skill-item:nth-of-type(7) {
-  min-height: 200px;
   grid-area: a7;
 }
 
 .skill-item:nth-of-type(8) {
-  min-height: 200px;
   grid-area: a8;
 }
 
 .skill-item:nth-of-type(9) {
-  min-height: 200px;
   grid-area: a9;
 }
 
@@ -974,11 +967,30 @@ input:hover, input:focus {
 
 .about__container {
   display: grid;
+  /* 
+    &__content 
+     p:first-of-type {
+      position: relative;
+
+      margin-top: -5px;
+
+      @include lg-min {
+        font-size: 1.125rem;
+      }
+    } */
 }
 
-.about__container__content p:first-of-type {
-  position: relative;
-  margin-top: -5px;
+.about__content p:first-of-type::after {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 200px;
+  content: "";
+  background-color: rgba(99, 117, 136, 0.1);
+}
+
+.about__content p:last-of-type {
+  margin: 0;
 }
 
 .about__image {
@@ -1238,6 +1250,12 @@ input:hover, input:focus {
   }
 }
 
+@media (min-height: 691px) {
+  .skill-item {
+    min-height: calc(33.33vh - 20px * 0.66);
+  }
+}
+
 @media (min-width: 768px) {
   .header-navbar__btn {
     display: none;
@@ -1252,6 +1270,9 @@ input:hover, input:focus {
     width: 100%;
     margin: 0 -20px 0 0;
     padding: 0;
+  }
+  .skill-item__title {
+    font-size: 1.25rem;
   }
 }
 
@@ -1271,6 +1292,7 @@ input:hover, input:focus {
   .skills__container {
     grid-gap: 10px;
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
+    grid-template-columns: repeat(4, 1fr);
   }
   .about {
     padding-top: 100px;
@@ -1283,9 +1305,6 @@ input:hover, input:focus {
   .about__container {
     grid-gap: 100px;
     grid-template-columns: 1fr 271px;
-  }
-  .about__container__content p:first-of-type {
-    font-size: 1.125rem;
   }
   .form__container {
     grid-template-columns: repeat(3, 1fr);
@@ -1317,6 +1336,7 @@ input:hover, input:focus {
   .skills__container {
     grid-gap: 10px;
     grid-template-areas: "a1 a1 a2" "a3 a4 a4" "a5 a5 a6 " "a7 a8 a6 " "a7 a9 a9 ";
+    grid-template-columns: repeat(3, 1fr);
   }
   .about {
     padding-top: 80px;
@@ -1368,6 +1388,9 @@ input:hover, input:focus {
   .header-content__title {
     margin: 0 0 33px 0;
   }
+  .skill-item__title {
+    font-size: 1.125rem;
+  }
   .about {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -1382,6 +1405,7 @@ input:hover, input:focus {
   .skills__container {
     grid-gap: 10px;
     grid-template-areas: "a1 a2" "a3 a2" "a4 a4" "a5 a6 " "a5 a7" "a8 a9";
+    grid-template-columns: 1fr 1fr;
   }
   .about h2 {
     margin-bottom: 36px;
@@ -1400,6 +1424,11 @@ input:hover, input:focus {
   .posts__grid {
     grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
     grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-height: 690px) {
+  .skill-item {
+    min-height: calc(230px - 20px * 0.66);
   }
 }
 
@@ -1425,6 +1454,7 @@ input:hover, input:focus {
   .skills__container {
     grid-gap: 20px;
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
+    grid-template-columns: 1fr;
   }
   .about h2 {
     margin-bottom: 36px;

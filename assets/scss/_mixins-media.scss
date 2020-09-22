@@ -174,12 +174,14 @@
 
 /* xx */
 @mixin xx-min {
-  @media (min-width: $xx) {
+  @media (min-height: $xx) {
     @content;
   }
 }
 @mixin xx {
-  @media (max-width: $xx - 1) {
+  @media (max-height: $xx - 1) {
     @content;
   }
 }
+
+
