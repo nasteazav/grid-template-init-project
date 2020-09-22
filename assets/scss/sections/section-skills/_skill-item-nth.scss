@@ -6,6 +6,15 @@
   padding: 20px;
   justify-items: center;
 
+ 
+  @include xx {
+    min-height: calc(230px - 20px * 0.66);
+    }
+    @include xx-min {
+    min-height: calc(33.33vh - 20px * 0.66);
+    
+    }
+
 
 
   &:nth-of-type(1) {

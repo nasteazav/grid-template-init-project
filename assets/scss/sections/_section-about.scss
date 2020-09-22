@@ -24,6 +24,7 @@ h2 {
   &__container {
     display: grid;
 
+
     @extend %container;
     @include lg-min {
       grid-gap: 100px;
@@ -42,33 +43,34 @@ h2 {
       grid-template-columns: 1fr ;
     }
 
-/* 
-    &__content 
-     p:first-of-type {
-      position: relative;
 
-      margin-top: -5px;
-
-      @include lg-min {
-        font-size: 1.125rem;
-      }
-    } */
  
   }
 
  &__content{
+  @include lg-min {
+    font-size: 1.125rem;
+  }
   p {
-    &:first-of-type::after {
-      position: absolute;
-      top: 0;
-    
-      width: 2px;
-      height: 200px;
-    
-      content: "";
-    
-      background-color: rgba(99, 117, 136, 0.1);
+    &:first-of-type {
+      position: relative;
+
+      margin-top: -5px;
+
+      &::after {
+        position: absolute;
+        top: 0;
+        width: 2px;
+        height: 200px;
+        content: "";
+        background-color: rgba(99, 117, 136, 0.1);
+        
+        @include lg-min {
+          right: -50px;
+      }
+      }
     }
+
    &:last-of-type {
       margin: 0;
     }
@@ -79,15 +81,16 @@ h2 {
   &__image {
     display: grid;
     justify-items: center;
+    align-content: center;
+   
 
     img {
-      
-      align-content: center;
-
       max-width: 100% ;
       max-height: 480px  ;
+    }
+
   
       
     }
   }
-}
+

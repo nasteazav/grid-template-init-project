@@ -502,7 +502,6 @@ h3 {
   text-align: center;
   letter-spacing: 0.05em;
   color: #637588;
-  font-family: "Roboto Slab", serif;
   font-size: 1.125rem;
 }
 
@@ -865,7 +864,7 @@ input:hover, input:focus {
 }
 
 .skill-item__title {
-  z-index: 2;
+  z-index: 1;
   margin: 0;
   position: absolute;
   top: 0;
@@ -891,7 +890,6 @@ input:hover, input:focus {
   -o-transition: color 0.5s;
   transition: color 0.5s;
   letter-spacing: 0.1em;
-  font-size: 1.25rem;
 }
 
 .skill-item:hover .skill-item__overlay {
@@ -966,17 +964,11 @@ input:hover, input:focus {
 
 .about__container {
   display: grid;
-  /* 
-    &__content 
-     p:first-of-type {
-      position: relative;
+}
 
-      margin-top: -5px;
-
-      @include lg-min {
-        font-size: 1.125rem;
-      }
-    } */
+.about__content p:first-of-type {
+  position: relative;
+  margin-top: -5px;
 }
 
 .about__content p:first-of-type::after {
@@ -995,11 +987,11 @@ input:hover, input:focus {
 .about__image {
   display: grid;
   justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .about__image img {
-  -ms-flex-line-pack: center;
-      align-content: center;
   max-width: 100%;
   max-height: 480px;
 }
@@ -1203,16 +1195,14 @@ input:hover, input:focus {
   font-size: 36px;
 }
 
-.footer__copy-span {
+.footer__copy span:nth-of-type(1) {
   margin-right: -0.5em;
   text-align: center;
   letter-spacing: 0.33em;
   font-weight: 100;
 }
 
-.footer__copy-span-bold {
-  margin: 0 0 0 -15px;
-  text-align: center;
+.footer__copy span:nth-of-type(2) {
   letter-spacing: 0.05em;
   color: #e5e5e5;
   font-weight: 700;
@@ -1250,6 +1240,12 @@ input:hover, input:focus {
   .skills {
     margin-bottom: 30px;
     padding: 10px;
+  }
+}
+
+@media (min-height: 691px) {
+  .skill-item {
+    min-height: calc(33.33vh - 20px * 0.66);
   }
 }
 
@@ -1302,6 +1298,12 @@ input:hover, input:focus {
   .about__container {
     grid-gap: 100px;
     grid-template-columns: 1fr 271px;
+  }
+  .about__content {
+    font-size: 1.125rem;
+  }
+  .about__content p:first-of-type::after {
+    right: -50px;
   }
   .form__container {
     grid-template-columns: repeat(3, 1fr);
@@ -1421,6 +1423,12 @@ input:hover, input:focus {
   .posts__grid {
     grid-template-areas: "p1 p2" "p3 p4" "p5 p6";
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-height: 690px) {
+  .skill-item {
+    min-height: calc(230px - 20px * 0.66);
   }
 }
 

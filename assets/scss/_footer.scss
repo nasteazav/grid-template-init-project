@@ -45,26 +45,22 @@
   }
 
   &__copy {
-    &-span {
-      margin-right: -0.5em;
-
-      text-align: center;
-      letter-spacing: 0.33em;
-
-      font-weight: 100;
+    span {
+      &:nth-of-type(1) {
+        margin-right: -0.5em;
+        text-align: center;
+        letter-spacing: 0.33em;
+        font-weight: 100;
+      }
+      &:nth-of-type(2) {
+        letter-spacing: 0.05em;
+        color: $color-gray-light;
+        font-weight: 700;
+      
     }
 
-    &-span-bold {
-      margin: 0 0 0 -15px;
-
-      text-align: center;
-      letter-spacing: 0.05em;
-
-      color: $color-gray-light;
-
-      font-weight: 700;
-    }
   }
+}
 }
 
 

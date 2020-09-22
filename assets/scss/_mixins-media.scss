@@ -173,13 +173,14 @@
 }
 
 /* xx */
-@mixin xx-min {
-  @media (min-height: $xx) {
+@mixin xx {
+  @media (max-height: $xx) {
     @content;
   }
+  
 }
-@mixin xx {
-  @media (max-height: $xx - 1) {
+@mixin xx-min {
+  @media (min-height: $xx + 1) {
     @content;
   }
 }
