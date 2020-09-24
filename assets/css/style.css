@@ -1232,15 +1232,18 @@ input:hover, input:focus {
 }
 
 @media (min-width: 576px) {
-  .btn-accent {
-    min-width: 350px;
-  }
   .header-content__buttons .btn:first-of-type {
     margin-right: 20px;
   }
   .skills {
     margin-bottom: 30px;
     padding: 10px;
+  }
+  .skills__button .btn-accent {
+    min-width: 350px;
+  }
+  .posts__button .btn-accent {
+    min-width: 350px;
   }
 }
 
@@ -1439,9 +1442,6 @@ input:hover, input:focus {
     text-align: center;
     font-size: 1.5rem;
   }
-  .btn-accent {
-    width: 100%;
-  }
   .header-content__buttons {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1462,6 +1462,9 @@ input:hover, input:focus {
     grid-template-areas: "a1" "a2" "a3" "a4" "a5" "a6" "a7" "a8" "a9";
     grid-template-columns: 1fr;
   }
+  .skills__button .btn-accent {
+    width: 100%;
+  }
   .about__container {
     grid-gap: 20px;
     grid-template-columns: 1fr;
@@ -1469,5 +1472,8 @@ input:hover, input:focus {
   .posts__grid {
     grid-template-areas: "p1" "p2" "p3" "p4" "p5" "p6";
     grid-template-columns: 1fr;
+  }
+  .posts__button .btn-accent {
+    width: 100%;
   }
 }
