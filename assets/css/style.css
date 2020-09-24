@@ -528,6 +528,7 @@ input {
   margin: 0;
   padding-right: 30px;
   padding-left: 30px;
+  color: #ffffff;
   -webkit-transition: background-color 0.5s, border-color 0.5s;
   -o-transition: background-color 0.5s, border-color 0.5s;
   transition: background-color 0.5s, border-color 0.5s;
@@ -548,27 +549,27 @@ input:hover, input:focus {
 }
 
 ::-webkit-input-placeholder {
-  opacity: 0.2;
+  opacity: 0.3;
   color: #ffffff;
 }
 
 ::-moz-placeholder {
-  opacity: 0.2;
+  opacity: 0.3;
   color: #ffffff;
 }
 
 :-ms-input-placeholder {
-  opacity: 0.2;
+  opacity: 0.3;
   color: #ffffff;
 }
 
 ::-ms-input-placeholder {
-  opacity: 0.2;
+  opacity: 0.3;
   color: #ffffff;
 }
 
 ::placeholder {
-  opacity: 0.2;
+  opacity: 0.3;
   color: #ffffff;
 }
 
